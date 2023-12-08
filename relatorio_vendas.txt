@@ -1,0 +1,16 @@
+
+RELATÓRIO DE VENDAS
+====================
+BEBIDAS
+=======
+
+PASTÉIS
+=======
+
+ESTOQUE RESTANTE
+=================
+Coca-Cola: 20 unidades
+Pepsi: 14 unidades
+Queijo: 49970 gramas
+Presunto: 19970 gramas
+Frango: 10000 gramas
