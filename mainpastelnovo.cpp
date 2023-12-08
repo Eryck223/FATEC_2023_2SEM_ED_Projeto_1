@@ -106,7 +106,7 @@ PedidoProducao cadastrarPedido(int& proximaSenha, Estoque& estoque) {
             cout << "Tipo inválido. Digite novamente: ";
         }
 
-        // Lógica para preencher os recheios conforme o tipo de pastel...
+      
 
         // Lógica para adicionar bebidas ao pedido
         int quantidadeBebidas;
@@ -162,29 +162,6 @@ PedidoProducao cadastrarPedido(int& proximaSenha, Estoque& estoque) {
     }
 
     return novoPedidoProducao;
-}
-
-// Função para editar um pedido existente
-void editarPedido(vector<PedidoProducao>& pedidosEmProducao, Estoque& estoque) {
-    int senhaEditar;
-    cout << "Digite a senha do pedido a ser editado: ";
-    cin >> senhaEditar;
-
-    for (size_t i = 0; i < pedidosEmProducao.size(); ++i) {
-        PedidoProducao& pedidoProducao = pedidosEmProducao[i];
-
-        if (pedidoProducao.senha == senhaEditar) {
-            cout << "Pedido encontrado. Realize as alterações:\n";
-
-            // Lógica para editar o pedido...
-            // Pode ser semelhante à lógica utilizada na função cadastrarPedido
-
-            cout << "Pedido editado com sucesso!\n";
-            return;
-        }
-    }
-
-    cout << "Pedido não encontrado.\n";
 }
 
 // Função para gerar e salvar o relatório de vendas em um arquivo de texto
@@ -249,9 +226,6 @@ int main() {
         switch (opcao) {
         case 1:
             pedidosEmProducao.push_back(cadastrarPedido(proximaSenha, estoque));
-            break;
-        case 2:
-            editarPedido(pedidosEmProducao, estoque);
             break;
         case 3:
             exibirPedidosProducao(pedidosEmProducao);
