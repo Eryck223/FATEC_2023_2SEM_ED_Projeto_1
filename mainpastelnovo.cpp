@@ -89,7 +89,7 @@ PedidoProducao cadastrarPedido(int& proximaSenha, Estoque& estoque) {
     int quantidadePasteis;
     cout << "Digite a quantidade de pasteis para o pedido: ";
 
-    // Adicionamos verificações e limpeza do buffer
+    //  verificações e limpeza do buffer
     while (!(cin >> quantidadePasteis) || quantidadePasteis <= 0) {
         cin.clear();                                                        // Limpa o estado de erro
         cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Descarta a entrada inválida
@@ -105,8 +105,6 @@ PedidoProducao cadastrarPedido(int& proximaSenha, Estoque& estoque) {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Tipo inválido. Digite novamente: ";
         }
-
-      
 
         // Lógica para adicionar bebidas ao pedido
         int quantidadeBebidas;
@@ -175,15 +173,11 @@ void gerarRelatorioVendasArquivo(const vector<PedidoProducao>& pedidosConcluidos
         // Bebidas
         arquivo << "BEBIDAS\n";
         arquivo << "=======\n";
-        // Lógica para contar a quantidade de cada bebida vendida
-        // ...
-
+       
         // Pastéis
         arquivo << "\nPASTÉIS\n";
         arquivo << "=======\n";
-        // Lógica para contar a quantidade de cada tipo de pastel vendido
-        // ...
-
+       
         // Estoque restante
         arquivo << "\nESTOQUE RESTANTE\n";
         arquivo << "=================\n";
